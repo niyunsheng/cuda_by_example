@@ -32,7 +32,7 @@ public:
     }
 
 
-    void show_image(int time=0)
+    void save_image(int time=0)
     {
         imwrite("test.jpg",image);
         return;

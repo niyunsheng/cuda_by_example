@@ -79,7 +79,7 @@ int main( void ) {
     HANDLE_ERROR( cudaMalloc( (void**)&dev_bitmap, bitmap.image_size() ) );
     data.dev_bitmap = dev_bitmap;
 
-    dim3    grid(DIM,DIM);
+    dim3    grid(DIM,DIM);  // cuda中定义的三维数组
     kernel<<<grid,1>>>( dev_bitmap );
 
     HANDLE_ERROR( cudaMemcpy( bitmap.get_ptr(), dev_bitmap,
@@ -88,6 +88,6 @@ int main( void ) {
                               
     HANDLE_ERROR( cudaFree( dev_bitmap ) );
                               
-    bitmap.show_image();
+    bitmap.save_image();
 }
 

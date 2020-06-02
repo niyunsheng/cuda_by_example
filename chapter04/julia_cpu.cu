@@ -70,6 +70,6 @@ int main( void ) {
 
     kernel( ptr );
 
-    bitmap.show_image();
+    bitmap.save_image();
 }
 
