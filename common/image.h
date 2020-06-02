@@ -14,11 +14,10 @@ class IMAGE
 public:
     Mat image;
 
-
     IMAGE( int w, int h) 
     {
         image = Mat::zeros(w,h,CV_8UC4);
-        imshow("images",image);
+        imwrite("ori.jpg",image);
     }
 
 
@@ -33,10 +32,10 @@ public:
     }
 
 
-    char show_image(int time=0)
+    void show_image(int time=0)
     {
-        imshow("images",image);
-        return waitKey(time);
+        imwrite("test.jpg",image);
+        return;
     }
 
 };
