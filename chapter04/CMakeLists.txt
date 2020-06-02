@@ -7,7 +7,7 @@ project(chapter_04 LANGUAGES CXX CUDA)
 SET(EXECUTABLE_OUTPUT_PATH "${PROJECT_BINARY_DIR}/bin")
 
 # 包含头文件
-include_directories(../common)
+# include_directories(../common) # 这个是否包含均可，因为原函数中指明了相对路径
 
 # Find OpenCV
 find_package(OpenCV REQUIRED)
