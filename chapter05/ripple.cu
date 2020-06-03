@@ -63,7 +63,7 @@ int main( void ) {
     dim3    threads(16,16);
     
     int ticks = 0;
-    bitmap.show_image(30);
+    bitmap.save_image();
     while(1)
     {
         kernel<<<blocks,threads>>>( data.dev_bitmap, ticks );
@@ -74,8 +74,8 @@ int main( void ) {
                             cudaMemcpyDeviceToHost ) );
 
         ticks++;
-        char key = bitmap.show_image(30);
-        if(key==27)
+        bitmap.save_image(ticks);
+        if(ticks==27)
         {
             break;
         }

@@ -27,8 +27,8 @@ endif()
 # nvcc flags  
 # set(CUDA_NVCC_FLAGS -arch=compute_30;-G;-g)  
   
-#set(CUDA_NVCC_FLAGS -gencode arch=compute_20,code=sm_20;-G;-g)  
-#set(CUDA_NVCC_FLAGS -gencode arch=compute_52,code=sm_52;-G;-g) 
+# set(CUDA_NVCC_FLAGS -gencode arch=compute_20,code=sm_20;-G;-g)  
+# set(CUDA_NVCC_FLAGS -gencode arch=compute_52,code=sm_52;-G;-g) 
 
 ADD_EXECUTABLE(add_loop_cpu add_loop_cpu.cu)
 

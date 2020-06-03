@@ -70,7 +70,7 @@ int main( void ) {
                               
     HANDLE_ERROR( cudaFree( dev_bitmap ) );
                               
-    bitmap.show_image();
+    bitmap.save_image(0);
 }
 
 

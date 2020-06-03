@@ -17,7 +17,7 @@ public:
     IMAGE( int w, int h) 
     {
         image = Mat::zeros(w,h,CV_8UC4);
-        imwrite("ori.jpg",image);
+        // imwrite("ori.jpg",image);
     }
 
 
@@ -32,9 +32,13 @@ public:
     }
 
 
-    void save_image(int time=0)
+    void save_image(int frame_id=0)
     {
-        imwrite("test.jpg",image);
+        char a[10]="000.jpg";
+        a[0] = a[0] + frame_id/100;
+        a[1] = a[1] + (frame_id/10)%10;
+        a[2] = a[2] + frame_id%10;
+        imwrite(a,image);
         return;
     }
 
