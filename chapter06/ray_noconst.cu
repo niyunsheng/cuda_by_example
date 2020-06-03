@@ -138,6 +138,6 @@ int main( void ) {
     HANDLE_ERROR( cudaFree( s ) );
 
     // display
-    bitmap.show_image();
+    bitmap.save_image();
 }
 
